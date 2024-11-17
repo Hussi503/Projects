@@ -39,8 +39,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     
-    # - name: Run golangci-lint with cache clearing
-    #   run: golangci-lint run --cache=false
+    - name: Check Go version
+      run: go version
+    
+    - name: Check golint version
+      run: golint --version  
 
     - name: Run golangci-lint
       uses: golangci/golangci-lint-action@v6
