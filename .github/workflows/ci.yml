@@ -43,7 +43,12 @@ jobs:
       run: go version
     
     - name: Install golint
-      run: go install golang.org/x/lint/golint@latest
+      run: |
+        go install golang.org/x/lint/golint@latest
+        export PATH=$PATH:$(go env GOPATH)/bin
+        echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+    
     
     - name: Check golint version
       run: golint --version  
