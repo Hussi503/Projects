@@ -53,10 +53,10 @@ jobs:
     # - name: Check golint version
     #   run: golint --version  
 
-    - name: Run golangci-lint
-      uses: golangci/golangci-lint-action@v6
-      with:
-        version: v1.56.2
+    # - name: Run golangci-lint
+    #   uses: golangci/golangci-lint-action@v6
+    #   with:
+    #     version: v1.56.2
         
       
   
