@@ -50,8 +50,8 @@ jobs:
 
     
     
-    - name: Check golint version
-      run: golint --version  
+    # - name: Check golint version
+    #   run: golint --version  
 
     - name: Run golangci-lint
       uses: golangci/golangci-lint-action@v6
